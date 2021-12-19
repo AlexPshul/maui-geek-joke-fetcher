@@ -1,0 +1,50 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GeekJokeFetcher.MainPage"
+             BackgroundColor="{DynamicResource SecondaryColor}">
+
+
+    <Grid RowSpacing="25" RowDefinitions="Auto,Auto,Auto,Auto,*"
+              Padding="{OnPlatform iOS='30,60,30,30', Default='30,60'}"
+              VerticalOptions="Fill">
+
+        <Label Text="Geek Joke Fetcher"
+               Grid.Row="0"
+               SemanticProperties.HeadingLevel="Level1"
+               FontSize="32"
+               HorizontalOptions="Center" />
+
+        <Label Text="Click to fetch a joke"
+               Grid.Row="1"
+               SemanticProperties.HeadingLevel="Level1"
+               SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+               FontSize="18"
+               HorizontalOptions="Center" />
+
+        <Button Text="Click me"
+                FontAttributes="Bold"
+                Grid.Row="2"
+                SemanticProperties.Hint="Fetch a fresh new joke"
+                Clicked="FetchJoke"
+                HorizontalOptions="Center" />
+
+        <Label Text=""
+               Grid.Row="3"
+               FontSize="18"
+               FontAttributes="Bold"
+               x:Name="GeekJoke"
+               HorizontalOptions="Center" />
+
+        <Label Grid.Row="4"
+               Text="The awesome service is by Sameer Kumar"
+               HorizontalOptions="Center" 
+               VerticalOptions="End"
+               Margin="0,0,0,20"/>
+
+        <Label Grid.Row="4"
+               Text="https://github.com/sameerkumar18/geek-joke-api"
+               HorizontalOptions="Center" 
+               VerticalOptions="End"/>
+
+    </Grid>
+</ContentPage>
